@@ -165,4 +165,47 @@ truncateString("A-tisket a-tasket A green and yellow basket", 10);
 //find the difference between num and str.length
 
 
+function truncateString(str, num) {
+  // Clear out that junk in your trunk
+  // if str is <== num return str
+  var diff = str.length - num;
+  
+  if(str.length <= num){
+      return str;
+  }else if(num < 4){
+      var short = str.slice(0, num);
+      var oth = short.concat("...");
+      return oth;
+  }else if( str.length > num || num > 4){
+      var long = str.slice(0, num-3);
+      var ext = long.concat("...");
+      return ext;
+  
+  }
+  // if str is > num slice str num-3 add ...
+  // if num <== 3 slice str num add ...
+  
+}
+
+truncateString("A-tisket a-tasket A green and yellow basket", 10);
+
+
+
+//chunk in groups
+
+
+function chunkArrayInGroups(arr, size) {
+  var result = [];
+  
+  for (var i = 0; i < arr.length; i+=size ){
+    result.push(arr.slice(i, i+size));
+      
+  }
+  return result;
+}
+
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
+
+
+
 </script>
