@@ -208,4 +208,37 @@ chunkArrayInGroups(["a", "b", "c", "d"], 2);
 
 
 
+//where in key to start
+
+
+function slasher(arr, howMany) {
+  // it doesn't always pay to be first
+  result = arr.splice(howMany);
+  return result;
+  
+}
+
+slasher([1, 2, 3], 9);
+
+
+//mutations not fully finished
+
+
+function mutation(arr) {
+    var main = arr[1].toLowerCase();
+    var test = arr[0].toLowerCase();
+    
+    for( i=0 ; i < main.length; i++ ){
+        if( test.indexOf( main[i] ) === -1){
+            return false;
+        }
+        return true;
+    }
+  
+}
+
+mutation(["hello", "hey"]);
+
+
+
 </script>
